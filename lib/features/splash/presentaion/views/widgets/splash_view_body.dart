@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
+import 'package:gdg_task_medical/core/utilis/app_router.dart';
+import 'package:go_router/go_router.dart';
 class SplashViewBody extends StatefulWidget {
  const  SplashViewBody({super.key});
 
@@ -12,13 +13,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const HomeView()),
-      );
+    Future.delayed(const Duration(seconds: 4), () {
+      if (mounted) {
+        GoRouter.of(context).push(AppRouter.kHomeView);
+      }
     });
-
   }
   @override
   Widget build(BuildContext context) {
