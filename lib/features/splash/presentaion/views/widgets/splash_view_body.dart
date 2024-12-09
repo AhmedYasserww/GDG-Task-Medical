@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gdg_task_medical/core/utilis/app_router.dart';
+import 'package:gdg_task_medical/core/utilis/app_text_styles.dart';
 import 'package:go_router/go_router.dart';
 class SplashViewBody extends StatefulWidget {
  const  SplashViewBody({super.key});
@@ -47,13 +48,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
+             Text(
               "GDG Medical",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-              ),
+              style: AppStyles.style20Regular
             ),
           ],
         ),
