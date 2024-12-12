@@ -1,4 +1,6 @@
+import 'package:gdg_task_medical/features/home/presentation/views/category_details_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
+import 'package:gdg_task_medical/features/home/presentation/views/widgets/all_product_details_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/widgets/navigation_bar_widget.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,6 +10,10 @@ abstract class AppRouter{
   static const kSplashView='/splashView';
   static const kHomeView = '/homeView';
   static const kNavigationBarWidget = '/navigationBarWidget';
+  static const kCategoryDetails = '/categoryDetails';
+  static const kAllProductDetailsView = '/allProductDetailsView';
+
+
 
 
   static final router = GoRouter(
@@ -24,6 +30,14 @@ abstract class AppRouter{
       GoRoute(
         path: kNavigationBarWidget,
         builder: (context, state) =>  const NavigationBarWidget(),
+      ),
+      GoRoute(
+        path: kCategoryDetails,
+        builder: (context, state) =>  const CategoryDetailsView(),
+      ),
+      GoRoute(
+        path: kAllProductDetailsView,
+        builder: (context, state) =>  const AllProductDetailsView(),
       ),
     ],
   );

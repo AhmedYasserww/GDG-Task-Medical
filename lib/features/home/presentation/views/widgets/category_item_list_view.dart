@@ -7,19 +7,16 @@ class CategoryItemListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:  EdgeInsets.only(left: 24.w,right: 14.w),
-      child: SizedBox(
-        height: 120.h,
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-            itemBuilder: (context,i){
-          return  Padding(
-            padding:  EdgeInsets.only(right: 11.w),
-              child: CategoryItem(categoryModel: categories[i],));
-        }),
-      ),
+    return SizedBox(
+      height: 120.h,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+          itemBuilder: (context,i){
+        return  Padding(
+          padding:  EdgeInsets.only(right: 11.w),
+            child: CategoryItem(categoryModel: categories[i],));
+      }),
     );
   }
 }

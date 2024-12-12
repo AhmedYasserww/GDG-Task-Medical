@@ -28,6 +28,7 @@ class ProductItem extends StatelessWidget {
           ),
 
         ),
+        SizedBox(height: 6.h,),
         Padding(
           padding: const EdgeInsets.only(left: 8,right: 30),
           child: Text("Accu-check ActiveTest Strip addd ccc aa ww",style: AppStyles.style10Normal,
@@ -36,7 +37,7 @@ class ProductItem extends StatelessWidget {
         ),
         SizedBox(height: 5.h,),
         Padding(
-          padding: const EdgeInsets.only(left: 7),
+          padding:  EdgeInsets.only(left: 7.w),
           child: Text("Rs.112",style: AppStyles.style16semiBold,),
         ),
       ],

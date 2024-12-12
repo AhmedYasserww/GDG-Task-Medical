@@ -19,13 +19,21 @@ class HomeViewBody extends StatelessWidget {
       children: [
         const HomeViewHeader(),
         SizedBox(height: 50.h,),
-        Text("Top Categories",style: AppStyles.style16semiBold,),
-        SizedBox(height: 3.h,),
-        const CategoryItemListView(),
-        SizedBox(height: 26.h,),
-        const ExtraOrderCategory(),
-        SizedBox(height: 27.h,),
-        const CustomDealsOfTheDayRow(),
+        Padding(
+          padding:  EdgeInsets.only(left: 24.w,right: 18.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Top Categories",style: AppStyles.style16semiBold,),
+              SizedBox(height: 3.h,),
+              const CategoryItemListView(),
+              SizedBox(height: 26.h,),
+              const ExtraOrderCategory(),
+              SizedBox(height: 27.h,),
+              const CustomDealsOfTheDayRow(),
+            ],
+          ),
+        ),
 
       ],
     ),
