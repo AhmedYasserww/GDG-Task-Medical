@@ -12,7 +12,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   int selectedIndex = 0;
 
   List<Widget> views = [
-    HomeView(),
+    const HomeView(),
     Container(child: Text("Cart"),),
     Container(child: Text("Favorite"),),
     Container(child: Text("Profile"),),
