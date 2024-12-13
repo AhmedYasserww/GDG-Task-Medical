@@ -1,6 +1,6 @@
 import 'package:gdg_task_medical/features/home/presentation/views/category_details_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
-import 'package:gdg_task_medical/features/home/presentation/views/widgets/all_product_details_view.dart';
+import 'package:gdg_task_medical/features/home/presentation/views/product_info_details.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/widgets/navigation_bar_widget.dart';
 import 'package:go_router/go_router.dart';
 
@@ -37,7 +37,7 @@ abstract class AppRouter{
       ),
       GoRoute(
         path: kAllProductDetailsView,
-        builder: (context, state) =>  const AllProductDetailsView(),
+        builder: (context, state) =>  const ProductInfoDetails(),
       ),
     ],
   );
