@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
+import 'package:gdg_task_medical/features/home/presentation/views/profile_view.dart';
 
 class NavigationBarWidget extends StatefulWidget {
   const NavigationBarWidget({super.key});
@@ -15,7 +16,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
     const HomeView(),
     Container(child: Text("Cart"),),
     Container(child: Text("Favorite"),),
-    Container(child: Text("Profile"),),
+   const ProfileView(),
   ];
 
   @override
