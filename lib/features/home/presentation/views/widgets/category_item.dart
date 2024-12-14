@@ -31,7 +31,9 @@ GoRouter.of(context).push(AppRouter.kCategoryDetails );
                 backgroundColor: categoryModel.color,
               ),
               SizedBox(height: 6.h,),
-              Text(categoryModel.text,style: AppStyles.style11,),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                  child: Text(categoryModel.text,style: AppStyles.style11,)),
               SizedBox(height: 29.h,)
             ],
           ),
