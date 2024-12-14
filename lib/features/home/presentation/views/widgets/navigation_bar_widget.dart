@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gdg_task_medical/features/home/presentation/views/cart_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/notification_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/profile_view.dart';
@@ -16,7 +18,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   List<Widget> views = [
     const HomeView(),
     const NotificationView(),
-    Container(child: Text("Favorite"),),
+   const CartView(),
    const ProfileView(),
   ];
 
@@ -32,43 +34,55 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
           children: [
             Expanded(
               flex: 3,
-              child: IconButton(
-                icon: Icon(
-                  Icons.home,
-                  color: selectedIndex == 0 ? Colors.blue : Colors.grey,
+              child: GestureDetector(
+                onTap: () => setState(() => selectedIndex = 0),
+                child: SvgPicture.asset(
+                  "assets/images/home_icon.svg",
+                  colorFilter: ColorFilter.mode(
+                    selectedIndex == 0 ? Colors.blue :  Colors.grey,
+                    BlendMode.srcIn,
+                  ),
                 ),
-                onPressed: () => setState(() => selectedIndex = 0),
               ),
             ),
             Expanded(
               flex: 3,
-              child: IconButton(
-                icon: Icon(
-                  Icons.add_alert_rounded,
-                  color: selectedIndex == 1 ? Colors.blue : Colors.grey,
+              child: GestureDetector(
+                onTap: () => setState(() => selectedIndex = 1),
+                child: SvgPicture.asset(
+                  "assets/images/btn_notification_icon.svg",
+                  colorFilter: ColorFilter.mode(
+                    selectedIndex == 1 ? Colors.blue : Colors.grey,
+                    BlendMode.srcIn,
+                  ),
                 ),
-                onPressed: () => setState(() => selectedIndex = 1),
               ),
             ),
-            const Spacer(flex: 3), // Large space between icons
+            const Spacer(flex: 3),
             Expanded(
               flex: 3,
-              child: IconButton(
-                icon: Icon(
-                  Icons.favorite_border_outlined,
-                  color: selectedIndex == 2 ? Colors.blue : Colors.grey,
+              child: GestureDetector(
+                onTap: () => setState(() => selectedIndex = 2),
+                child: SvgPicture.asset(
+                  "assets/images/cart_icon.svg",
+                  colorFilter: ColorFilter.mode(
+                    selectedIndex == 2 ? Colors.blue : Colors.grey,
+                    BlendMode.srcIn,
+                  ),
                 ),
-                onPressed: () => setState(() => selectedIndex = 2),
               ),
             ),
             Expanded(
               flex: 3,
-              child: IconButton(
-                icon: Icon(
-                  Icons.person,
-                  color: selectedIndex == 3 ? Colors.blue : Colors.grey,
+              child: GestureDetector(
+                onTap: () => setState(() => selectedIndex = 3),
+                child: SvgPicture.asset(
+                  "assets/images/person_icon.svg",
+                  colorFilter: ColorFilter.mode(
+                    selectedIndex == 3 ? Colors.blue : Colors.grey,
+                    BlendMode.srcIn,
+                  ),
                 ),
-                onPressed: () => setState(() => selectedIndex = 3),
               ),
             ),
           ],
