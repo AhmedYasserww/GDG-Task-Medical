@@ -1,3 +1,4 @@
+import 'package:gdg_task_medical/features/home/presentation/views/cart_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/category_details_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/product_info_details.dart';
@@ -12,9 +13,7 @@ abstract class AppRouter{
   static const kNavigationBarWidget = '/navigationBarWidget';
   static const kCategoryDetails = '/categoryDetails';
   static const kAllProductDetailsView = '/allProductDetailsView';
-
-
-
+  static const kCartView = '/cartView';
 
   static final router = GoRouter(
     routes: [
@@ -38,6 +37,10 @@ abstract class AppRouter{
       GoRoute(
         path: kAllProductDetailsView,
         builder: (context, state) =>  const ProductInfoDetails(),
+      ),
+      GoRoute(
+        path: kCartView,
+        builder: (context, state) =>  const CartView(),
       ),
     ],
   );
