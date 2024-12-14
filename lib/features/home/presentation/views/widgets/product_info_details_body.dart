@@ -43,23 +43,7 @@ class ProductInfoDetailsBody extends StatelessWidget {
         SliverToBoxAdapter(child: SizedBox(height: 16.h,))
       ],
     );
-    // return SingleChildScrollView(
-    //     padding: EdgeInsets.symmetric(horizontal: 24.w),
-    //     child: Column(
-    //       crossAxisAlignment: CrossAxisAlignment.start,
-    //       children: [
-    //         const HeaderSection(),
-    //         SizedBox(height: 16.h),
-    //         const ImageCarousel(),
-    //         SizedBox(height: 16.h),
-    //         const PriceAndCartSection(),
-    //         SizedBox(height: 16.h),
-    //         const ProductDetailsSection(),
-    //         SizedBox(height: 16.h),
-    //         const CustomButton(),
-    //       ],
-    //     ),
-    //   );
+
 
   }
 }

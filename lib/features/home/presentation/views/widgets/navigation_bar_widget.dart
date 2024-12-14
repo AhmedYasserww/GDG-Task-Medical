@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/home_view.dart';
+import 'package:gdg_task_medical/features/home/presentation/views/notification_view.dart';
 import 'package:gdg_task_medical/features/home/presentation/views/profile_view.dart';
 
 class NavigationBarWidget extends StatefulWidget {
@@ -14,7 +15,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
 
   List<Widget> views = [
     const HomeView(),
-    Container(child: Text("Cart"),),
+    const NotificationView(),
     Container(child: Text("Favorite"),),
    const ProfileView(),
   ];
