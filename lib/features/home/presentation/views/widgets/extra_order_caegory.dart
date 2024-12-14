@@ -13,7 +13,7 @@ class ExtraOrderCategory extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.r),
         image: const DecorationImage(
-          image: AssetImage('assets/images/Mask_Group.png'), // Path to your image
+          image: AssetImage('assets/images/Mask_Group.png'),
           fit: BoxFit.cover,
         ),
       ),

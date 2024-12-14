@@ -24,7 +24,7 @@ class ProfileHeader extends StatelessWidget {
               "Hi, Rahul Kanjariya",
               style: AppStyles.style20Regular.copyWith(color: const Color(0xff090F47).withOpacity(.45)),
             ),
-            SizedBox(height: 4),
+            SizedBox(height: 4.h),
             Text(
               "Welcome to GDG Medical Store",
               style:  AppStyles.style14Normal.copyWith(color: const Color(0xff090F47).withOpacity(.45)),
